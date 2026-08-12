@@ -1,18 +1,25 @@
-# NexaCode Studio
+# NexaCode Studio — Product Website
 
-NexaCode Studio is a developer-focused AI coding-agent project. It explores a hybrid architecture where centralized orchestration coordinates planning, policy and agent state while an IntelliJ client performs explicit local execution against the developer workspace.
+This repository hosts the public product website for **NexaCode Studio**, the IntelliJ experience of the NexaCode AI Agent Platform.
 
-## Project website
+The product itself is developed in the private `ai-agent-platform` repository. This repository contains only the public-facing website and domain-registration files.
 
-This repository hosts the NexaCode project landing page via GitHub Pages.
+## What the website covers
 
-Expected Pages URL after enabling Pages from the `main` branch root:
+- Product positioning and developer workflow
+- IntelliJ-native experience
+- Java control-plane and local-execution architecture
+- Governed workspace tool categories
+- Source-code retrieval and live IDE context
+- Approval, audit, RBAC and workspace security boundaries
+- Model-provider, self-hosting, scalability and observability strategy
+- Honest active-development status and common questions
 
-`https://ngocthanhluong.github.io/nexa-code-intellij-extension/`
+All capability claims are derived from the current platform source and documentation. The site intentionally avoids pricing, release-download and availability claims that are not yet part of the product.
 
 ## Run locally
 
-No build step is required.
+No build step or dependency installation is required.
 
 ```bash
 python3 -m http.server 8080
@@ -20,28 +27,34 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Enable GitHub Pages
+## GitHub Pages
+
+The site is designed to deploy from the `main` branch root:
+
+`https://ngocthanhluong.github.io/nexa-code-intellij-extension/`
+
+GitHub repository settings:
 
 1. Open **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
+2. Choose **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
 4. Save.
 
 ## Custom domain
 
-The intended project domain is `nexacode.is-a.dev`.
+The intended custom domain is `nexacode.is-a.dev`. Registration material lives under `is-a-dev/`.
 
-Registration data:
+Do not add a Pages `CNAME` file until the domain registration and DNS target are active.
 
-```json
-{
-  "owner": {
-    "username": "NgocThanhLuong"
-  },
-  "records": {
-    "CNAME": "NgocThanhLuong.github.io"
-  }
-}
-```
+## Content maintenance
 
-The site is intentionally positioned as a developer/software project and contains no pricing, subscription or commercial sales call-to-action.
+Before advertising a new platform capability:
+
+1. Verify that the implementation exists in `ai-agent-platform`.
+2. Confirm its security and approval boundary.
+3. Avoid presenting roadmap or partial functionality as generally available.
+4. Update the relevant website section and FAQ when the user-facing contract changes.
+
+## Project status
+
+NexaCode Studio is an active, non-commercial software-development project. Broader packaging and release details will be published when available.
